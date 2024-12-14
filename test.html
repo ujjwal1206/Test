@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorry Shreya</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #f0f8ff, #fae1dd);
+            color: #333;
+        }
+        header {
+            background-color: #ff6f61;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+        nav a {
+            text-decoration: none;
+            margin: 0 15px;
+            color: #ff6f61;
+            font-size: 18px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .page {
+            display: none;
+            padding: 20px;
+            text-align: center;
+        }
+        .page.active {
+            display: block;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #ff6f61;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #e55c50;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Dear Shreya, I'm Sorry</h1>
+        <p>I hope this small gesture brightens your day and shows how much I care!</p>
+    </header>
+
+    <nav>
+        <a href="#" onclick="showPage('page1')">Why I'm Sorry</a>
+        <a href="#" onclick="showPage('page2')">Memories</a>
+        <a href="#" onclick="showPage('page3')">A Little Fun</a>
+        <a href="#" onclick="showPage('page4')">Special Message</a>
+    </nav>
+
+    <div id="page1" class="page active">
+        <h2>Why I'm Sorry</h2>
+        <p>I realize that my actions have hurt you, and for that, I deeply apologize. You mean a lot to me, and I truly value our connection.</p>
+        <button onclick="showPage('page2')">Next</button>
+    </div>
+
+    <div id="page2" class="page">
+        <h2>Our Memories</h2>
+        <p>Here are some cherished memories we shared together:</p>
+        <ul>
+            <li>That time we laughed togeter and share the best bond.</li>
+            <li>All the late-night talks and fun adventures.</li>
+            <li>The little moments that made us smile.</li>
+        </ul>
+        <p>These moments remind me why you are so special!</p>
+        <button onclick="showPage('page3')">Next</button>
+    </div>
+
+    <div id="page3" class="page">
+        <h2>A Little Fun</h2>
+        <p>Click the button below to reveal a special surprise:</p>
+        <button onclick="showSurprise()">Reveal Surprise</button>
+        <p id="surprise" style="margin-top: 20px; font-size: 20px; color: #ff6f61; display: none;">You are amazing, Shreya! 🌟</p>
+        <button onclick="showPage('page4')">Next</button>
+    </div>
+
+    <div id="page4" class="page">
+        <h2>Special Message</h2>
+        <p>To Shreya, My Forever Friend
+
+            I messed up, I know, and it tears me apart,
+            But here I am, speaking straight from my heart.
+            In the silence, I've missed your voice, your care,
+            You’re my anchor, my strength, my friend so rare.
+            
+            I’m sorry for the pain, the weight I’ve caused,
+            For the moments we lost, the time I paused.
+            But through it all, one truth shines clear,
+            I’ll always be with you, I’ll always be near.
+            
+            In your laughter, in your tears, in all that you do,
+            I’ll stand by your side, I’ll see you through.
+            I trust your choices, your dreams, your way,
+            And I’ll cheer for you every single day.
+            
+            Let’s forget the hurt, let’s mend the past,
+            And build a bond that will forever last.
+            You’re not just a friend; you’re my life’s best part,
+            And I hold you dearly, deep in my heart.
+            
+            So here I stand, with a promise anew,
+            To always be there, no matter what you do.
+            Forgive me, my friend, and let’s make amends,
+            For you’ll always be my forever friend.</p>
+        <p>Thank you for being you, and I promise to do better!</p>
+    </div>
+
+    <script>
+        function showPage(pageId) {
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => page.classList.remove('active'));
+            document.getElementById(pageId).classList.add('active');
+        }
+
+        function showSurprise() {
+            document.getElementById('surprise').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
